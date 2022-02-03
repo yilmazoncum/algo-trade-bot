@@ -1,6 +1,10 @@
 {
     "scripts": {
-        "start": "tsc && node --unhandled-rejections=strict ./dist/app.js"
-      }
-
+        "start": "cd src && node app.js"
+    },
+    "dependencies": {
+        "dotenv": "^15.0.0",
+        "node-binance-api": "^0.13.1"
+    },
+    "type":"module"
 }
