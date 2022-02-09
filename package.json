@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "cd src && nodemon server.js"
+        "start": "cd src && nodemon out/server.js"
     },
     "dependencies": {
         "dotenv": "^15.0.0",
