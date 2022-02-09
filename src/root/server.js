@@ -4,6 +4,8 @@ import express from 'express';
 const app = express();
 const port = 3000
 
+
+
 app.get('/', (req, res) => {
   res.send('Home page')
 })
@@ -17,13 +19,6 @@ app.route('/balance').get(getBalance)
 app.route('/balance/:symbol').get(getSymbolBalance)
 
 app.route('/trades').get(getTradeHistory)
-
-
-
-app.route('/').get()
-
-app.route('/').get()
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
