@@ -36,8 +36,7 @@ export async function getBalance(req, res) {
 export async function getSymbolBalance(req, res) {
   binance.balance((error, balances) => {
     if ( error ) return console.error(error);
-    console.log(req.params.symbol); // ! balances.X X yerine bi variable koyamıyorum.
-    res.status(200).send(balances.USDT);  //spesifik bi coin in cüzdan bilgisi
+    res.status(200).send(balances[req.params.symbol]);  //spesifik bi coin in cüzdan bilgisi
   });
 }
 
