@@ -1,4 +1,15 @@
 
+const ws = new WebSocket("ws://localhost:8086");
+
+ws.addEventListener("open",()=>{
+    console.log("we are connected"); 
+})
+
+ws.addEventListener("message",(e)=>{
+    console.log(JSON.parse(e.data) );
+})
+
+
 const chart = LightweightCharts.createChart(document.body, { width: 400, height: 300 });
 
 const candlestickSeries = chart.addCandlestickSeries();
